@@ -6,5 +6,5 @@ sealed class NetworkCallStatus<out T>(
 
     class Success<T>(data: T) : NetworkCallStatus<T>(data)
     class Error<T>(data: T? = null, message: String?) : NetworkCallStatus<T>(data, message)
-    class Loading<T>(data: T? = null) : NetworkCallStatus<T>()
+    class Loading<T>() : NetworkCallStatus<T>()
 }
